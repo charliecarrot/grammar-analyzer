@@ -7,5 +7,6 @@
     },
     "prettier.useEditorConfig": false,
     "prettier.useTabs": false,
-    "prettier.configPath": ".prettierrc"
+    "prettier.configPath": ".prettierrc",
+    "prettier.tabWidth": 4
 }
