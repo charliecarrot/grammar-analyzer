@@ -2,10 +2,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.formatOnPaste": false,
+    "editor.detectIndentation": false,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit"
     },
     "prettier.useEditorConfig": false,
     "prettier.useTabs": false,
-    "prettier.configPath": ".prettierrc"
+    "prettier.configPath": ".prettierrc",
+    "prettier.tabWidth": 4
 }
