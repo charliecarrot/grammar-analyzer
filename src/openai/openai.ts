@@ -1,14 +1,15 @@
 import OpenAI from 'openai'
+import generatePrompt from './generatePrompt'
 
 type CompletionResponse = {
     success: boolean
     message?: string
-    data?: string | null
+    data?: JSON
 }
 
 export const complete = async (openai: OpenAI, sentence: string): Promise<CompletionResponse> => {
     const params: OpenAI.Chat.ChatCompletionCreateParams = {
-        messages: [{ role: 'user', content: sentence }],
+        messages: [{ role: 'user', content: generatePrompt(sentence) }],
         model: 'gpt-3.5-turbo',
     }
     try {
@@ -16,7 +17,7 @@ export const complete = async (openai: OpenAI, sentence: string): Promise<Comple
         console.debug(chatCompletion.choices[0])
         return {
             success: true,
-            data: chatCompletion.choices[0].message.content,
+            data: JSON.parse((chatCompletion.choices[0].message.content ?? '').replace(/\\n/g, '')),
         }
     } catch (error) {
         let message = 'OpenAI Error.'

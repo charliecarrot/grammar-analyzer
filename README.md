@@ -5,6 +5,7 @@ Takes an English sentence and parses into JSON representation of grammatical cat
 ## Table of Contents
 
 -   [Purpose](#purpose)
+-   [Example](#example)
 -   [Getting Started](#getting-started)
     -   [Prerequisites](#prerequisites)
     -   [Installation](#installation)
@@ -20,6 +21,86 @@ Takes an English sentence and parses into JSON representation of grammatical cat
 ## Purpose
 
 The grammar-analyzer tool is a node.js project that parses sentences to find grammatical info and delivers a JSON representation of the grammatical analysis. The goal of this project is to provide the foundation for a web app that allows users to interact with and understand the some of the complexities of English grammar. This project leverages the power of the OpenAI API to analyze and return detailed grammatical structures in an easy-to-parse format.
+
+## Example
+
+Currently only identifies lexical categories at a simple level, but eventually will show sentence structure and relationships between words and phrases.
+
+_Example input:_
+
+```
+We will miss you at school, John
+```
+
+_Example output:_
+
+```json
+[
+    {
+        "text": "we",
+        "category": {
+            "categoryName": "Pronoun",
+            "type": "personal",
+            "role": "content"
+        },
+        "level": "lexical"
+    },
+    {
+        "text": "will",
+        "category": {
+            "categoryName": "Auxiliary",
+            "type": "modal",
+            "role": "function"
+        },
+        "level": "lexical"
+    },
+    {
+        "text": "miss",
+        "category": {
+            "categoryName": "Verb",
+            "type": "monotransitive",
+            "role": "content"
+        },
+        "level": "lexical"
+    },
+    {
+        "text": "you",
+        "category": {
+            "categoryName": "Pronoun",
+            "type": "personal",
+            "role": "content"
+        },
+        "level": "lexical"
+    },
+    {
+        "text": "at",
+        "category": {
+            "categoryName": "Preposition",
+            "type": "",
+            "role": "function"
+        },
+        "level": "lexical"
+    },
+    {
+        "text": "school",
+        "category": {
+            "categoryName": "Noun",
+            "type": "countable",
+            "role": "content"
+        },
+        "level": "lexical"
+    },
+    {
+        "text": "john",
+        "category": {
+            "categoryName": "Noun",
+            "type": "proper",
+            "role": "content"
+        },
+        "level": "lexical"
+    }
+]
+```
 
 ## Getting Started
 

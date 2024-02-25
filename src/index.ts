@@ -20,6 +20,8 @@ app.post('/', async (req: Request, res: Response) => {
         return res.status(400).json({ success: false, message: 'No sentence provided.' })
     }
 
+    // TODO: add check for long sentence (set max limit) and also multiple sentences (break sentence at period and only use first part)
+
     try {
         const openai = new OpenAI({
             apiKey: process.env['OPENAI_API_KEY'],
