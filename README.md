@@ -25,8 +25,10 @@ This guide will help you set up your development environment and get the backend
 ### Prerequisites
 
 Ensure you have the following installed:
-- Node.js (v14.0.0 or later)
-- npm (v6.0.0 or later)
+- Node.js (v21.0.0 or later)
+- npm (v10.0.0 or later)
+
+*[Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)*
 
 ### Installation
 
