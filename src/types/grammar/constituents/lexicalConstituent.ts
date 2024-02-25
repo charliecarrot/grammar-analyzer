@@ -24,6 +24,7 @@ type LexicalCategory =
 type Noun = {
     categoryName: 'Noun'
     type: NounType
+    role: 'content'
 }
 type NounType =
     | 'countable' // ex: car, potato, letter, idea, rainbow, student
@@ -35,6 +36,7 @@ type NounType =
 type Pronoun = {
     categoryName: 'Pronoun'
     type: PronounType
+    role: 'content'
 }
 type PronounType =
     | 'personal' // inflect for person and subject/object (ex: me, they, her)
@@ -51,6 +53,7 @@ type PronounType =
 type Determiner = {
     categoryName: 'Determiner'
     type: DeterminerType
+    role: 'function'
 }
 type DeterminerType =
     | 'article' // central determiner (ex: the, a, an)
@@ -65,17 +68,20 @@ type DeterminerType =
 type Preposition = {
     categoryName: 'Preposition'
     type: ''
+    role: 'function'
 }
 
 type Adjective = {
     categoryName: 'Adjective'
     type: ''
+    role: 'content'
 }
 
 // Verbs
 type Verb = {
     categoryName: 'Verb'
     type: VerbType
+    role: 'content' | 'function' // function is really only for copular verbs
 }
 type VerbType =
     | 'intransitive' // requires no arguments (no objects, stands alone) (ex: lives, falls, run)
@@ -86,30 +92,35 @@ type VerbType =
     | 'pro-form' // stand in for an entire understood verb phrase (ex: be, do, is) as in, "is she writing? she is"
 
 // Auxiliaries
+// An auxiliary is always found next to a verb (unless it's a pro-form) and helps indicate tense, aspect, mood, and voice
 type Auxiliary = {
     categoryName: 'Auxiliary'
     type: AuxType
+    role: 'function'
 }
 type AuxType =
     | 'primary' // able to inflect for tense and show subject-verb agreement (ex: be, have, get, do)
     | 'modal' // provide interpretation of condition, certainty, possibility (ex: can, could, would, must, should)
-    | 'semi-modal' // function like modals, but can inflect for tense and person (ex: be going to, have to, be supposed to, wanna)
+    | 'semi-modal' // function like modals, but can inflect for tense and person (ex: be going to, have to, be supposed to, wanna, used to)
     | 'pro-form' // stand in for an entire understood verb phrase (ex: did, can, has) as in "some people like the movie. others didn't"
 
 // Other verb-related categories
 type Infinitive = {
     categoryName: 'Infinitive' // (ex: to walk, to eat, to be)
     type: ''
+    role: 'content'
 }
 
 type Negator = {
     categoryName: 'Negator'
     type: ''
+    role: 'content'
 }
 
 type Adverb = {
     categoryName: 'Adverb'
     type: AdverbType
+    role: 'content'
 }
 type AdverbType =
     | ''
@@ -121,20 +132,24 @@ type AdverbType =
 type Coordinator = {
     categoryName: 'Coordinator' // connects two equal constituents (ex: and, but, yet, so)
     type: ''
+    role: 'function'
 }
 
 type Subordinator = {
     categoryName: 'Subordinator' // connects subordinate phrase (ex: although, because, even if, though, until)
     type: ''
+    role: 'function'
 }
 
 // Others
 type Insert = {
     categoryName: 'Insert' // function as discourse markers (ex: oh, um, hello, sorry, damn, okay, well, thank you, you know)
     type: ''
+    role: 'content'
 }
 
 type Existential = {
     categoryName: 'Existential' // "there" as in "there is one movie I like"
     type: ''
+    role: 'function'
 }
