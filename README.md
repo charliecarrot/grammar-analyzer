@@ -1,6 +1,20 @@
 # grammar-analyzer
 Takes an English sentence and parses into JSON representation of grammatical categories and relationships.
 
+## Table of Contents
+- [Purpose](#purpose)
+- [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+  * [Configuration](#configuration)
+  * [Development](#development)
+  * [Building and Running](#building-and-running)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Acknowledgements](#acknowledgements)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/' target='_blank'>Table of contents generated with markdown-toc</a></i></small>
+
 ## Purpose
 The grammar-analyzer tool is a node.js project that parses sentences to find grammatical info and delivers a JSON representation of the grammatical analysis. The goal of this project is to provide the foundation for a web app that allows users to interact with and understand the some of the complexities of English grammar. This project leverages the power of the OpenAI API to analyze and return detailed grammatical structures in an easy-to-parse format.
 
