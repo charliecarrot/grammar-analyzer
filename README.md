@@ -95,10 +95,10 @@ This command serves the application from the `dist/` directory.
 
 ## Usage
 
-To analyze a sentence, make a POST request to `/analyze` with the sentence you wish to analyze. Here's an example using `curl`:
+To analyze a sentence, make a POST request with the sentence you wish to analyze. Here's an example using `curl`:
 
 ```sh
-curl -X POST http://localhost:3000/analyze
+curl -X POST http://localhost:3000/
 -H "Content-Type: application/json"
 -d '{"sentence": "The quick brown fox jumps over the lazy dog."}'
 ```
