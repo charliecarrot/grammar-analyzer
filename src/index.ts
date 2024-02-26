@@ -1,4 +1,3 @@
-// src/index.ts
 import express, { type Express, type Request, type Response } from 'express'
 import dotenv from 'dotenv'
 import OpenAI from 'openai'
