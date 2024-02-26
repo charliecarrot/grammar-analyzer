@@ -20,11 +20,19 @@ Takes an English sentence and parses into JSON representation of grammatical cat
 
 ## Purpose
 
-The grammar-analyzer tool is a node.js project that parses sentences to find grammatical info and delivers a JSON representation of the grammatical analysis. The goal of this project is to provide the foundation for a web app that allows users to interact with and understand the some of the complexities of English grammar. This project leverages the power of the OpenAI API to analyze and return detailed grammatical structures in an easy-to-parse format.
+The grammar-analyzer tool is a node.js project that parses sentences
+to find grammatical info and delivers a JSON representation of the
+grammatical analysis. The goal of this project is to provide the foundation
+for a web app that allows users to interact with and understand some of
+the complexities of English grammar.
+
+This project leverages the power of the OpenAI API to analyze and return
+detailed grammatical structures in an easy-to-parse format.
 
 ## Example
 
-Currently only identifies lexical categories at a simple level, but eventually will show sentence structure and relationships between words and phrases.
+The program currently only identifies lexical categories at a simple level, but eventually
+it will show sentence structure and relationships between words and phrases.
 
 _Example input:_
 
@@ -104,7 +112,8 @@ _Example output:_
 
 ## Getting Started
 
-This guide will help you set up your development environment and get the backend running on your local machine for development and testing purposes.
+This guide will help you set up your development environment and get the backend
+running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -137,7 +146,8 @@ npm install
 
 ### Configuration
 
-Before running the application, you'll need to set up your environment variables, including your OpenAI API key:
+Before running the application, you'll need to set up your environment variables,
+including your OpenAI API key:
 
 1. Create a `.env` file in the root directory of the project.
 2. Add the following line, replacing `YOUR_API_KEY` with your actual OpenAI API key:
@@ -154,7 +164,8 @@ To start the development server with hot reload, run:
 npm run dev
 ```
 
-This command uses `nodemon` to automatically restart the server upon detecting changes in the source code, facilitating rapid development.
+This command uses `nodemon` to automatically restart the server upon detecting
+changes in the source code, facilitating rapid development.
 
 ### Building and Running
 
@@ -176,7 +187,8 @@ This command serves the application from the `dist/` directory.
 
 ## Usage
 
-To analyze a sentence, make a POST request with the sentence you wish to analyze. Here's an example using `curl`:
+To analyze a sentence, make a POST request with the sentence you wish to analyze.
+Here's an example using `curl`:
 
 ```sh
 curl -X POST http://localhost:3000/
@@ -188,12 +200,32 @@ The API will return a JSON response detailing the grammatical structure of the s
 
 ## Contributing
 
-We welcome contributions! Please feel free to fork the repository, make changes, and submit pull requests, or use it as the basis for your own project.
+We welcome contributions! Please feel free to fork the repository, make changes,
+and submit pull requests, or use it as the basis for your own project.
 
 [Trello Board](https://trello.com/b/oNtxIq6k/charliedevs)
 
 ## Acknowledgements
 
-This project is powered by the OpenAI API, enabling us to provide detailed analyses of English sentence structures.
+This project is powered by the OpenAI API, enabling us to provide
+detailed analyses of English sentence structures.
 
-Much of the grammar analysis categories, names, and format is based on the book _Grammar In Real Life_ by linguist and conlanger [Jessie Sams](https://jessiesams.com).
+Much of the grammar analysis categories, names, and format is based
+on the book _Grammar In Real Life_ by linguist and conlanger [Jessie Sams](https://jessiesams.com).
+
+<small>
+Copyright © 2024 Charles Davis
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+</small>
