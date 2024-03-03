@@ -2,7 +2,9 @@ import { type BaseConstituent, type Constituent } from './constituent'
 
 export interface BaseClause extends BaseConstituent {
     level: 'clause'
-    function: string
+    category: string
+    type?: string
+    function?: string
     children: Constituent[]
 }
 

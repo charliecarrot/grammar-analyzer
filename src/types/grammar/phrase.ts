@@ -1,6 +1,7 @@
 import { type BaseConstituent, type Constituent } from './constituent'
-import { type LongVerbPhrase } from './phrases/longVerb'
-import { type ShortVerbPhrase } from './phrases/shortVerb'
+import { AdverbPhrase } from './phrases/adverbPhrase'
+import { type LongVerbPhrase } from './phrases/longVerbPhrase'
+import { type ShortVerbPhrase } from './phrases/shortVerbPhrase'
 
 export interface BasePhrase extends BaseConstituent {
     level: 'phrase'
@@ -10,4 +11,4 @@ export interface BasePhrase extends BaseConstituent {
 }
 
 // TODO: replace BasePhrase with phrase interfaces as they're defined
-export type Phrase = ShortVerbPhrase | LongVerbPhrase | BasePhrase
+export type Phrase = ShortVerbPhrase | LongVerbPhrase | AdverbPhrase | BasePhrase

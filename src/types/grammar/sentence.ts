@@ -8,44 +8,18 @@ export const sentence = 'Even so, Mom always said her big break was right around
 export const analyzedSentence: Sentence = [
     // array of phrases and clauses that make up a full sentence
     {
-        level: 'phrase',
-        category: 'adverb',
-        function: 'discourseMarker',
-        children: [
-            // a phrase or clause can contain other phrases or clauses, or lexical items
-            {
-                text: 'even so',
-                level: 'lexical',
-                category: 'adverb',
-            },
-        ],
-    },
-    {
-        level: 'phrase',
-        category: 'noun',
-        function: 'subject',
-        children: [
-            {
-                text: 'Mom',
-                level: 'lexical',
-                category: 'noun',
-                type: 'proper',
-            },
-        ],
-    },
-    {
-        level: 'phrase',
-        category: 'verb',
-        type: 'long',
-        function: 'predicate',
+        level: 'clause',
+        category: 'independent',
+        type: 'complex',
         children: [
             {
                 level: 'phrase',
                 category: 'adverb',
-                function: 'adverbial',
+                function: 'discourseMarker',
                 children: [
+                    // a phrase or clause can contain other phrases or clauses, or lexical items
                     {
-                        text: 'always',
+                        text: 'even so',
                         level: 'lexical',
                         category: 'adverb',
                     },
@@ -53,118 +27,151 @@ export const analyzedSentence: Sentence = [
             },
             {
                 level: 'phrase',
-                category: 'verb',
-                type: 'short',
-                function: 'head',
-                tmav: {
-                    tense: 'past',
-                },
+                category: 'noun',
+                function: 'subject',
                 children: [
                     {
-                        text: 'said',
+                        text: 'Mom',
                         level: 'lexical',
-                        category: 'verb',
-                        type: 'monotransitive',
+                        category: 'noun',
+                        type: 'proper',
                     },
                 ],
             },
             {
-                level: 'clause',
-                category: 'nominal',
-                function: 'directObject',
+                level: 'phrase',
+                category: 'verb',
+                type: 'long',
+                function: 'predicate',
                 children: [
                     {
                         level: 'phrase',
-                        category: 'noun',
-                        function: 'subject',
+                        category: 'adverb',
+                        function: 'adverbial',
                         children: [
                             {
-                                text: 'her',
+                                text: 'always',
                                 level: 'lexical',
-                                category: 'determiner',
-                                type: 'possessive',
-                            },
-                            {
-                                level: 'phrase',
-                                category: 'adjective',
-                                function: 'attributive',
-                                children: [
-                                    {
-                                        text: 'big',
-                                        level: 'lexical',
-                                        category: 'adjective',
-                                    },
-                                ],
-                            },
-                            {
-                                text: 'break',
-                                level: 'lexical',
-                                category: 'noun',
-                                type: 'commonCount',
+                                category: 'adverb',
                             },
                         ],
                     },
                     {
                         level: 'phrase',
                         category: 'verb',
-                        type: 'long',
-                        function: 'predicate',
+                        type: 'short',
+                        function: 'head',
+                        tmav: {
+                            tense: 'past',
+                        },
+                        children: [
+                            {
+                                text: 'said',
+                                level: 'lexical',
+                                category: 'verb',
+                                type: 'monotransitive',
+                            },
+                        ],
+                    },
+                    {
+                        level: 'clause',
+                        category: 'nominal',
+                        function: 'directObject',
                         children: [
                             {
                                 level: 'phrase',
-                                category: 'verb',
-                                type: 'short',
-                                function: 'head',
-                                tmav: {
-                                    tense: 'past',
-                                },
+                                category: 'noun',
+                                function: 'subject',
                                 children: [
                                     {
-                                        text: 'was',
+                                        text: 'her',
                                         level: 'lexical',
-                                        category: 'verb',
-                                        type: 'copular',
+                                        category: 'determiner',
+                                        type: 'possessive',
+                                    },
+                                    {
+                                        level: 'phrase',
+                                        category: 'adjective',
+                                        function: 'attributive',
+                                        children: [
+                                            {
+                                                text: 'big',
+                                                level: 'lexical',
+                                                category: 'adjective',
+                                            },
+                                        ],
+                                    },
+                                    {
+                                        text: 'break',
+                                        level: 'lexical',
+                                        category: 'noun',
+                                        type: 'commonCount',
                                     },
                                 ],
                             },
                             {
                                 level: 'phrase',
-                                category: 'preposition',
-                                function: 'subjectAdverbial',
+                                category: 'verb',
+                                type: 'long',
+                                function: 'predicate',
                                 children: [
                                     {
                                         level: 'phrase',
-                                        category: 'adverb',
-                                        function: 'adverbial',
+                                        category: 'verb',
+                                        type: 'short',
+                                        function: 'head',
+                                        tmav: {
+                                            tense: 'past',
+                                        },
                                         children: [
                                             {
-                                                text: 'right',
+                                                text: 'was',
                                                 level: 'lexical',
-                                                category: 'adverb',
+                                                category: 'verb',
+                                                type: 'copular',
                                             },
                                         ],
                                     },
                                     {
-                                        text: 'around',
-                                        level: 'lexical',
-                                        category: 'preposition',
-                                    },
-                                    {
                                         level: 'phrase',
-                                        category: 'noun',
-                                        function: 'objectOfPreposition',
+                                        category: 'preposition',
+                                        function: 'subjectAdverbial',
                                         children: [
                                             {
-                                                text: 'the',
-                                                level: 'lexical',
-                                                category: 'determiner',
-                                                type: 'article',
+                                                level: 'phrase',
+                                                category: 'adverb',
+                                                function: 'adverbial',
+                                                children: [
+                                                    {
+                                                        text: 'right',
+                                                        level: 'lexical',
+                                                        category: 'adverb',
+                                                    },
+                                                ],
                                             },
                                             {
-                                                text: 'corner',
+                                                text: 'around',
                                                 level: 'lexical',
+                                                category: 'preposition',
+                                            },
+                                            {
+                                                level: 'phrase',
                                                 category: 'noun',
-                                                type: 'commonCount',
+                                                function: 'objectOfPreposition',
+                                                children: [
+                                                    {
+                                                        text: 'the',
+                                                        level: 'lexical',
+                                                        category: 'determiner',
+                                                        type: 'article',
+                                                    },
+                                                    {
+                                                        text: 'corner',
+                                                        level: 'lexical',
+                                                        category: 'noun',
+                                                        type: 'commonCount',
+                                                    },
+                                                ],
                                             },
                                         ],
                                     },
